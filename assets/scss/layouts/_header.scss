@@ -2,6 +2,16 @@
 @use '../base/' as *;
 
 .header {
+<<<<<<< HEAD
+	&--section {
+		padding: 15px 0;
+	}
+
+	.logo {
+		max-width: 100px;
+	}
+}
+=======
     &--section {
         padding: 15px 0;
     }
@@ -51,3 +61,4 @@
         }
     }
 }
+>>>>>>> master

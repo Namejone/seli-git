@@ -4,12 +4,15 @@
     box-shadow: 0px 20px 25px 0px rgba(4, 11, 20, 0.1);
 }
 
+<<<<<<< HEAD
+=======
 @mixin transition-common {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
+>>>>>>> master
 // Media Query Mixins (Mobile First Approach)
 @mixin media-query($breakpoint) {
     @if $breakpoint == breakpoint-xsm {
@@ -41,4 +44,8 @@
             @content;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

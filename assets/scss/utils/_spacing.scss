@@ -1,0 +1,76 @@
+@use 'variables' as vars;
+
+$spacing-scale: ();
+@for $i from 10 through 120 {
+  @if ($i % 5 == 0) {
+    $spacing-scale: append($spacing-scale, $i);
+  }
+}
+
+@mixin generate-spacing($property, $short) {
+  @each $space in $spacing-scale {
+    .#{$short}-#{$space} {
+      #{$property}: #{$space}px !important;
+    }
+
+    @media (min-width: vars.$breakpoint-xsm) {
+      .#{$short}-xsm-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+    @media (min-width: vars.$breakpoint-sm) {
+      .#{$short}-sm-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+    @media (min-width: vars.$breakpoint-md) {
+      .#{$short}-md-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+    @media (min-width: vars.$breakpoint-lg) {
+      .#{$short}-lg-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+    @media (min-width: vars.$breakpoint-xl) {
+      .#{$short}-xl-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+    @media (min-width: vars.$breakpoint-xxl) {
+      .#{$short}-xxl-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+    @media (min-width: vars.$breakpoint-xxl-2) {
+      .#{$short}-xxl-2-#{$space} {
+        #{$property}: #{$space}px !important;
+      }
+    }
+  }
+}
+@include generate-spacing(padding, p);
+@include generate-spacing(margin, m);
+
+@include generate-spacing(padding-top, pt);
+@include generate-spacing(margin-top, mt);
+
+@include generate-spacing(padding-bottom, pb);
+@include generate-spacing(margin-bottom, mb);
+
+@include generate-spacing(padding-left, ps);
+@include generate-spacing(margin-left, ms);
+
+@include generate-spacing(padding-right, pe);
+@include generate-spacing(margin-right, me);
+
+@include generate-spacing(padding-left, px);
+@include generate-spacing(padding-right, px);
+@include generate-spacing(margin-left, mx);
+@include generate-spacing(margin-right, mx);
+
+@include generate-spacing(padding-top, py);
+@include generate-spacing(padding-bottom, py);
+@include generate-spacing(margin-top, my);
+@include generate-spacing(margin-bottom, my);
