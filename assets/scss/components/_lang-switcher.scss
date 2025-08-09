@@ -1,0 +1,10 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.lang-switcher {
+	color: $text-black;
+	font-size: 18px;
+	font-weight: 600;
+	gap: 5px;
+
+}

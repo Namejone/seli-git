@@ -1,0 +1,12 @@
+@use '../utils/' as *;
+@use '../base/' as *;
+
+.header {
+	&--section {
+		padding: 15px 0;
+	}
+
+	.logo {
+		max-width: 100px;
+	}
+}
