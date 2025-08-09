@@ -2,6 +2,7 @@
 @use '../base/' as *;
 
 .menu {
+<<<<<<< HEAD
     .offcanvas {
         background-color: rgba(5, 60, 90, 0.8);
         backdrop-filter: blur(8px);
@@ -12,6 +13,15 @@
 
         @include media-query(breakpoint-md) {
             
+=======
+    &-offcanvas-show {
+        width: 32px;
+        height: 32px;
+
+        @include media-query(breakpoint-lg) {
+            width: 40px;
+            height: 40px;
+>>>>>>> master
         }
 
         svg {
@@ -19,4 +29,34 @@
             height: 100%;
         }
     }
+<<<<<<< HEAD
+=======
+
+    .offcanvas {
+        background-color: $body-color;
+    }
+
+    &__item {
+        border-bottom: 1px solid $cool-gray;
+    }
+
+    &__link {
+        color: $dark-gray;
+        font-weight: 600;
+        padding: 14px 0;
+
+        &:hover,
+        &.active {
+            color: $primary2-turquoise;
+        }
+
+        &.active {
+            font-weight: 700;
+        }
+    }
+
+    &__contact__title {
+        border-bottom: 1px solid $cool-gray;
+    }
+>>>>>>> master
 }
